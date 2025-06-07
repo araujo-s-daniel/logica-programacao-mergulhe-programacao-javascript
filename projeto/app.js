@@ -4,11 +4,9 @@ console.log(numeroSecreto);
 let chute;
 let tentativas = 1;
 
-// Enquanto o chute for diferente igual ao número secreto
 while (chute != numeroSecreto) {
     chute = prompt('Escolha um número entre 1 e 10');
 
-    // Se o chute for igual ao número secreto
     if (chute == numeroSecreto) {
         break;
     } else {
@@ -18,13 +16,9 @@ while (chute != numeroSecreto) {
             alert(`O número secreto é menor que ${chute}`);
         }
 
-        // tentativas = tentativas + 1;
         tentativas++;
     }
 }
 
-if (tentativas > 1) {
-    alert(`Isso aí! Você descobriu o número secreto (${numeroSecreto}) com ${tentativas} tentativas!`);
-} else {
-    alert(`Isso aí! Você descobriu o número secreto (${numeroSecreto}) com ${tentativas} tentativa!`);
-}
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+alert(`Isso aí! Você descobriu o número secreto (${numeroSecreto}) com ${tentativas} ${palavraTentativa}!`);
